@@ -1,8 +1,8 @@
 [
   {
     "slug": "beauty-salon-ai-marketing-toolkit",
-    "name": "Beauty Salon AI Marketing Toolkit",
-    "short": "A more effortless way to keep your salon visible, booked and beautifully on-brand.",
+    "name": "Beauty Salon Marketing System",
+    "short": "Editable salon campaigns, promotions and content planning templates in one practical system.",
     "category": "Beauty & Wellness",
     "categoryKey": "beauty",
     "price": 39,
@@ -10,14 +10,25 @@
     "visual": "rose",
     "tag": "First release",
     "audience": "Salon owners, nail artists, lash technicians and independent beauty professionals",
-    "includes": ["100 practical AI prompts tailored to beauty businesses", "90 ready-to-edit social media captions", "30 editable Canva promotional template concepts", "A 12-month marketing planning calendar", "Customer reminder and follow-up message templates", "Beginner-friendly setup and usage guide"],
-    "outcomes": ["Create more consistent social content", "Plan campaigns without starting from scratch", "Save time on everyday marketing tasks"],
-    "sample": "Act as a social media manager for an independent beauty salon. Write five friendly Instagram captions promoting our new [service]. Keep the tone warm and professional, include one clear call to action, and avoid exaggerated claims."
+    "includes": [
+      "Salon brand and customer profile worksheet",
+      "90 editable caption starters with review checklist",
+      "30 campaign and promotional design concepts",
+      "12-month marketing calendar",
+      "Appointment follow-up and feedback templates",
+      "Step-by-step workflow and implementation guide"
+    ],
+    "outcomes": [
+      "Create more consistent social content",
+      "Plan campaigns without starting from scratch",
+      "Save time on everyday marketing tasks"
+    ],
+    "sample": "Draft a friendly, accurate Instagram promotion for a salon's new treatment. Confirm the actual price, availability and terms before publishing."
   },
   {
     "slug": "cleaning-business-ai-toolkit",
-    "name": "Cleaning Business AI Toolkit",
-    "short": "Turn everyday enquiries, quotes and marketing into a smoother workflow.",
+    "name": "Cleaning Business Operations Kit",
+    "short": "Make customer enquiries, quoting and follow-ups more consistent with ready-to-use operations templates.",
     "category": "Service Businesses",
     "categoryKey": "services",
     "price": 39,
@@ -25,13 +36,24 @@
     "visual": "mint",
     "tag": "Coming soon",
     "audience": "Domestic cleaners, commercial cleaning teams and independent service providers",
-    "includes": ["Service-specific AI marketing prompts", "Customer enquiry response templates", "Editable quote and proposal templates", "Follow-up and review request messages", "Social media planning worksheets", "Simple AI setup guide"],
-    "outcomes": ["Respond to customers more consistently", "Prepare marketing content faster", "Keep recurring business tasks organised"],
+    "includes": [
+      "Client enquiry intake forms",
+      "Professional quotation and proposal templates",
+      "Appointment confirmation and follow-up messages",
+      "Review request and repeat booking workflows",
+      "Weekly service scheduling worksheet",
+      "Marketing and service promotion templates"
+    ],
+    "outcomes": [
+      "Respond to customers more consistently",
+      "Prepare marketing content faster",
+      "Keep recurring business tasks organised"
+    ],
     "sample": "Write a clear, friendly reply to a homeowner asking for a regular cleaning quote. Ask for the property size, frequency, location and special requirements before giving a price."
   },
   {
     "slug": "personal-trainer-content-kit",
-    "name": "Personal Trainer Content Kit",
+    "name": "Fitness Client & Content Planner",
     "short": "Show up online with confidence—even when your calendar is full.",
     "category": "Fitness & Coaching",
     "categoryKey": "fitness",
@@ -40,14 +62,25 @@
     "visual": "lavender",
     "tag": "Coming soon",
     "audience": "Personal trainers, fitness coaches and independent instructors",
-    "includes": ["AI prompts for educational social content", "30-day content calendar template", "Client onboarding message templates", "Newsletter and campaign copy starters", "Editable promotional design ideas", "Responsible AI usage tips"],
-    "outcomes": ["Create content with a repeatable process", "Communicate professionally with new clients", "Build an organised content library"],
+    "includes": [
+      "Editable 30-day marketing calendar",
+      "Client onboarding communication templates",
+      "Social content topics and examples",
+      "Newsletter and campaign copy starters",
+      "Client goal tracking worksheet",
+      "Responsible content review checklist"
+    ],
+    "outcomes": [
+      "Create content with a repeatable process",
+      "Communicate professionally with new clients",
+      "Build an organised content library"
+    ],
     "sample": "Create a week of beginner-friendly social posts for a personal trainer. Keep advice general, avoid medical claims, and finish each post with a helpful question for readers."
   },
   {
-    "slug": "small-business-prompt-library",
-    "name": "Small Business Prompt Library",
-    "short": "Your starting point for smarter writing, planning and daily business tasks.",
+    "slug": "small-business-workflow-library",
+    "name": "Small Business Workflow Library",
+    "short": "Reusable checklists, business planning templates and structured operating workflows.",
     "category": "AI & Productivity",
     "categoryKey": "ai",
     "price": 19,
@@ -55,13 +88,24 @@
     "visual": "sky",
     "tag": "Coming soon",
     "audience": "Founders, freelancers and small business owners exploring AI",
-    "includes": ["100+ categorised AI prompt starters", "Marketing and content prompts", "Planning and productivity prompts", "Customer communication prompts", "Examples showing how to personalise outputs", "A prompt-writing quick reference"],
-    "outcomes": ["Spend less time staring at a blank page", "Learn to give AI clearer instructions", "Get more useful first drafts"],
-    "sample": "Act as a helpful business planning assistant. Ask me five questions about my small business, then create a simple 30-day action plan with realistic weekly priorities."
+    "includes": [
+      "30-day business priorities planner",
+      "Client communication templates",
+      "Weekly workflow and project tracker",
+      "Marketing campaign brief template",
+      "Customer feedback log",
+      "Implementation checklists"
+    ],
+    "outcomes": [
+      "Organise routine business tasks",
+      "Reduce repetitive administration",
+      "Build consistent weekly habits"
+    ],
+    "sample": "Outline the steps in a repeatable customer enquiry-to-booking workflow for a small service business, with clear owner responsibilities."
   },
   {
     "slug": "social-content-planner",
-    "name": "30-Day Social Content Planner",
+    "name": "30-Day Social Content Planning System",
     "short": "One clear month of content planning, without the overwhelm.",
     "category": "AI & Productivity",
     "categoryKey": "ai",
@@ -70,13 +114,24 @@
     "visual": "peach",
     "tag": "Coming soon",
     "audience": "Solo entrepreneurs and small teams who want a practical posting routine",
-    "includes": ["30-day editable content calendar", "Content theme and pillar planner", "Caption-writing AI prompts", "Call-to-action swipe file", "Weekly review tracker", "Simple repurposing framework"],
-    "outcomes": ["Plan a month of content in one place", "Keep messaging consistent", "Reuse good ideas across channels"],
+    "includes": [
+      "Editable 30-day publishing calendar",
+      "Content pillar planning worksheet",
+      "Weekly content creation workflow",
+      "Call-to-action reference guide",
+      "Campaign performance tracker",
+      "Cross-channel repurposing template"
+    ],
+    "outcomes": [
+      "Plan a month of content in one place",
+      "Keep messaging consistent",
+      "Reuse good ideas across channels"
+    ],
     "sample": "Give me 12 helpful Instagram post ideas for a [type of business] serving [audience]. Group them into education, behind-the-scenes, trust-building and offers."
   },
   {
     "slug": "business-growth-bundle",
-    "name": "Business Growth Bundle",
+    "name": "Business Operations & Growth Bundle",
     "short": "A coordinated toolkit for planning, creating and communicating with clarity.",
     "category": "Bundles",
     "categoryKey": "bundles",
@@ -85,8 +140,19 @@
     "visual": "blue",
     "tag": "Coming soon",
     "audience": "Business owners ready for a more joined-up approach to content and operations",
-    "includes": ["Business planning workbook", "Marketing goal and campaign templates", "AI prompt and content collections", "Social publishing calendar", "Customer communication templates", "Step-by-step implementation roadmap"],
-    "outcomes": ["Bring core business resources together", "Create a simpler weekly workflow", "Make planning and publishing more repeatable"],
+    "includes": [
+      "Business goals and operations workbook",
+      "Pricing and campaign planning templates",
+      "Service workflow and client communication collection",
+      "30-day content calendar",
+      "Simple progress and KPI trackers",
+      "Step-by-step implementation roadmap"
+    ],
+    "outcomes": [
+      "Bring core business resources together",
+      "Create a simpler weekly workflow",
+      "Make planning and publishing more repeatable"
+    ],
     "sample": "Help me plan a realistic four-week marketing sprint for my [business]. Suggest one main goal, three measurable priorities and a simple weekly checklist."
   }
 ]
