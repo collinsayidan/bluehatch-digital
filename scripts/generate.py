@@ -36,21 +36,21 @@ def btn(text, url, cls='btn-primary', iconname='arrow'):
  return f'<a class="btn {cls}" href="{url}">{esc(text)} {icon(iconname)}</a>'
 
 def header(active=''):
- navitems=[('Shop','/shop/','shop'),('How it works','/how-it-works/','how'),('Free resources','/resources/','resources'),('About','/about/','about'),('FAQ','/faq/','faq')]
+ navitems=[('AI Tools','/ai-tools/','tools'),('Marketing Studio','/studio/','tools'),('Free Tools','/free-tools/','free'),('Digital Products','/shop/','shop'),('Pricing','/pricing/','pricing'),('About','/about/','about')]
  links=''.join(f'<a href="{path}" class="{"active" if active==key else ""}">{name}</a>' for name,path,key in navitems)
  return f'''<a class="skip-link" href="#main">Skip to content</a>
-<div class="topbar">Tools made for people building something big. <strong>Our first collection is coming soon.</strong> <a href="/shop/">Take a look →</a></div>
+<div class="topbar">Meet your new business toolkit. <strong>Marketing Studio prototype is ready to try.</strong> <a href="/studio/">Try it free →</a></div>
 <header class="header"><div class="container nav">
 <a class="logo" href="/" aria-label="BlueHatch Digital home"><img class="logo-mark" src="/assets/img/logo-mark.svg" alt=""><span class="logo-name">BlueHatch <span>D I G I T A L</span></span></a>
 <nav class="nav-links" aria-label="Primary navigation">{links}</nav>
-<div class="header-actions">{btn('Explore toolkits','/shop/','btn-primary btn-small')}<button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-label="Toggle navigation" aria-controls="mobile-nav">{icon('menu',23)}</button></div>
-</div><nav class="mobile-menu" data-mobile-menu id="mobile-nav" aria-label="Mobile navigation">{links}{btn('Explore toolkits','/shop/','btn-primary')}</nav></header>'''
+<div class="header-actions">{btn('Launch the studio','/studio/','btn-primary btn-small')}<button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-label="Toggle navigation" aria-controls="mobile-nav">{icon('menu',23)}</button></div>
+</div><nav class="mobile-menu" data-mobile-menu id="mobile-nav" aria-label="Mobile navigation">{links}{btn('Launch the studio','/studio/','btn-primary')}</nav></header>'''
 
 def footer():
  return f'''<footer class="footer"><div class="container"><div class="footer-grid">
-<div class="footer-brand"><a class="logo" href="/"><img class="logo-mark" src="/assets/img/logo-mark.svg" alt=""><span class="logo-name">BlueHatch <span>D I G I T A L</span></span></a><p>Thoughtfully made AI toolkits and digital resources for ambitious small businesses. Less busywork. More room to grow.</p><div class="footer-social"><a data-config-link="instagramUrl" class="hide" href="#" aria-label="Instagram">IG</a><a data-config-link="pinterestUrl" class="hide" href="#" aria-label="Pinterest">Pin</a><a data-config-link="tiktokUrl" class="hide" href="#" aria-label="TikTok">TT</a></div></div>
-<div><h3>Explore</h3><div class="footer-links"><a href="/shop/">All toolkits</a><a href="/how-it-works/">How it works</a><a href="/resources/">Free resources</a><a data-config-link="etsyShopUrl" class="hide" href="#">Etsy shop ↗</a><a data-config-link="payhipShopUrl" class="hide" href="#">Payhip shop ↗</a></div></div>
-<div><h3>Company</h3><div class="footer-links"><a href="/about/">Our story</a><a href="/faq/">FAQ</a><a href="/contact/">Contact us</a></div></div>
+<div class="footer-brand"><a class="logo" href="/"><img class="logo-mark" src="/assets/img/logo-mark.svg" alt=""><span class="logo-name">BlueHatch <span>D I G I T A L</span></span></a><p>Practical marketing tools, business calculators and digital resources for independent businesses. Less busywork, more room to grow.</p><div class="footer-social"><a data-config-link="instagramUrl" class="hide" href="#" aria-label="Instagram">IG</a><a data-config-link="pinterestUrl" class="hide" href="#" aria-label="Pinterest">Pin</a><a data-config-link="tiktokUrl" class="hide" href="#" aria-label="TikTok">TT</a></div></div>
+<div><h3>Explore</h3><div class="footer-links"><a href="/ai-tools/">AI tools</a><a href="/studio/">Marketing Studio</a><a href="/free-tools/">Free calculators</a><a href="/shop/">Digital products</a><a href="/pricing/">Pricing</a><a data-config-link="etsyShopUrl" class="hide" href="#">Etsy shop ↗</a><a data-config-link="payhipShopUrl" class="hide" href="#">Payhip shop ↗</a></div></div>
+<div><h3>Company</h3><div class="footer-links"><a href="/about/">Our story</a><a href="/how-it-works/">How it works</a><a href="/faq/">FAQ</a><a href="/contact/">Contact us</a></div></div>
 <div><h3>Get in touch</h3><div class="footer-links"><a data-email-link>Contact email available at launch</a><a href="/contact/">Send an enquiry →</a></div><p>Launching with practical digital resources for founders and independents.</p></div>
 </div><div class="footer-bottom"><span>© 2026 BlueHatch Digital. All rights reserved. <br>BlueHatch Digital is a proposed working brand.</span><div class="footer-bottom-links"><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a><a href="/legal/refunds/">Refund policy</a></div></div></div></footer>'''
 
@@ -59,8 +59,8 @@ def page(title, description, content, active='', path='/', extra=''):
  doc=f'''<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} | BlueHatch Digital</title><meta name="description" content="{esc(description, quote=True)}"><meta name="theme-color" content="#111e38">
 <meta property="og:type" content="website"><meta property="og:title" content="{esc(title,quote=True)} | BlueHatch Digital"><meta property="og:description" content="{esc(description,quote=True)}"><meta property="og:image" content="/assets/img/og-image.svg">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/css/styles.css">
-</head><body>{header(active)}<main id="main">{content}</main>{footer()}<script src="/assets/js/config.js"></script><script src="/assets/js/site.js" defer></script>{extra}</body></html>'''
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/css/styles.css"><link rel="stylesheet" href="/assets/css/hybrid.css">
+</head><body>{header(active)}<main id="main">{content}</main>{footer()}<script src="/assets/js/config.js"></script><script src="/assets/js/site.js" defer></script><script src="/assets/js/hybrid.js" defer></script>{extra}</body></html>'''
  dst=OUT / (path.strip('/') if path!='/' else '') / 'index.html'
  dst.parent.mkdir(parents=True,exist_ok=True)
  dst.write_text(doc,encoding='utf-8')
@@ -86,7 +86,7 @@ values=[('bolt','Less time figuring it out','Skip the blank page with structured
 value_html=''.join(f'<div class="value-card"><span class="value-icon">{icon(k,24)}</span><h3>{title}</h3><p>{text}</p></div>' for k,title,text in values)
 howsteps=[('01','Choose your toolkit','Find a resource designed for your industry, your goals or the kind of task you want to simplify.'),('02','Make it your own','Personalise the prompts and editable templates with your business details, tone and style.'),('03','Get back to business','Use what you create, review it for accuracy and spend more time serving your customers.')]
 steps=''.join(f'<div class="how-card"><span class="step-number">{num}</span><h3>{title}</h3><p>{text}</p></div>' for num,title,text in howsteps)
-faq_items=[('What exactly is an AI toolkit?','A set of practical resources—such as prompts, editable templates, planning tools and short instructions—that help you complete common business tasks using AI.'),('Do I need to know how to use AI already?','Not at all. We design for beginners. Each toolkit will include clear instructions and examples so you can get started step by step.'),('Are the products ready to buy?','We are preparing our first collection. Product pages are previews until secure checkout links and completed digital files have been connected.'),('Will the products work for my business?','Each industry toolkit is tailored to common needs in that sector. You will still need to personalise the templates, check the outputs and apply your own judgement.')]
+faq_items=[('What makes BlueHatch different?','We combine practical interactive browser tools, a guided Marketing Studio prototype and upcoming digital templates. The prototype is not yet connected to an AI model.'),('Do I need an AI account?','No account is needed to use our free calculator or Marketing Studio prototype. Future live AI products may have different requirements.'),('Can I buy a subscription now?','Not yet. Our free tools are available now. Subscription plans and paid digital products are shown as concepts until released.'),('Will the products work for my business?','Each industry toolkit is tailored to common needs in that sector. You will still need to personalise the templates, check the outputs and apply your own judgement.')]
 def faq_html(items):
  return ''.join(f'<div class="faq-item"><button class="faq-question" data-faq-button aria-expanded="false">{esc(q)}<span class="plus">+</span></button><div class="faq-answer">{esc(a)}</div></div>' for q,a in items)
 
@@ -174,3 +174,7 @@ page('Page not found','The page you were looking for could not be found.',page_h
 # Domain-independent indexing. Update SITE_URL in sitemap.xml after choosing a domain.
 (OUT/'robots.txt').write_text('User-agent: *\nAllow: /\n# Add Sitemap: https://YOUR-DOMAIN/sitemap.xml after domain connection.\n',encoding='utf-8')
 # Do not publish placeholder/canonical domain into sitemap. Generate on final domain selection.
+
+# Hybrid platform routes replace the original homepage and add interactive tools.
+from hybrid import render as render_hybrid
+render_hybrid(page)
