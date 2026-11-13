@@ -1,0 +1,17 @@
+name: Build and smoke test
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate static website
+        run: python3 scripts/generate.py
+      - name: Validate internal pages and assets
+        run: python3 tests/smoke_test.py
