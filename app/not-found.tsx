@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main className="notfound shell"><span className="eyebrow">404 / NOT FOUND</span><h1>That page hasn&apos;t hatched.</h1><p>There&apos;s plenty more to explore at BlueHatch.</p><Link href="/" className="button primary">Back to homepage →</Link></main>}

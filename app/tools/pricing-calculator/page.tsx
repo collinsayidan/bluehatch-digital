@@ -1,0 +1,5 @@
+import {PageHero} from "@/components/PageHero";
+import PricingCalculator from "@/components/PricingCalculator";
+import {Banner} from "@/components/Banner";
+export const metadata={title:"Pricing & Profit Calculator"};
+export default function PricingCalculatorPage(){return <main><PageHero eyebrow="FREE TOOL / PRICING CALCULATOR" title={<>Know your costs.<br/><span style={{color:"#32888d"}}>Price with purpose.</span></>} description="See how your costs, time and target profit margin affect your selling price. A free starting point for business planning—not financial advice."/><section className="section tinted"><div className="shell"><PricingCalculator/></div></section><Banner title="Got a spreadsheet full of numbers?" description="Try our free Data Explorer to understand what your figures are telling you." href="/tools/data-explorer" cta="Open Data Explorer"/></main>;}

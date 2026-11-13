@@ -1,0 +1,5 @@
+import {PageHero} from "@/components/PageHero";
+import DataExplorer from "@/components/DataExplorer";
+import {Banner} from "@/components/Banner";
+export const metadata={title:"CSV Data Explorer"};
+export default function DataExplorerPage(){return <main><PageHero eyebrow="FREE TOOL / DATA EXPLORER" title={<>A clearer view of <span style={{color:"#318c8d"}}>your data.</span></>} description="Upload a CSV, explore useful summaries and compare values. Everything in this preview runs in your browser—no account, upload to our servers or AI model required."><span className="pill">✓ Working browser-based prototype</span></PageHero><section className="section tinted"><div className="shell"><DataExplorer/></div></section><Banner title="A great place to start." description="Want more than a quick data summary? Our product roadmap includes AI-assisted analysis and reusable dashboards." href="/platform" cta="Explore the platform"/></main>;}

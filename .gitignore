@@ -1,8 +1,10 @@
-.DS_Store
-.vercel/
+node_modules/
+.next/
+out/
 .env
 .env.*
-!*.example
-__pycache__/
-*.pyc
-screenshots/
+!.env.example
+*.tsbuildinfo
+.DS_Store
+.vercel/
+coverage/
