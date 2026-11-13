@@ -1,0 +1,110 @@
+BLUEHATCH DIGITAL
+20 Practical AI Prompts for Small Business Owners
+Smart Tools. Better Business.
+
+HOW TO USE
+Copy any prompt into your preferred AI assistant. Replace details inside
+[square brackets] with information about your business. Check all output
+before using it, particularly facts, pricing and customer-facing claims.
+
+MARKETING & CONTENT
+
+01. CUSTOMER PROFILE
+"Help me create a simple customer profile for my [type of business]
+serving [area/audience]. Include their main needs, what might stop them
+from buying, and what they value most. Ask me questions if needed."
+
+02. CONTENT IDEAS
+"Generate 15 social media post ideas for my [business]. Organise them
+into educational, behind-the-scenes, trust-building and promotional posts.
+Keep them realistic for a solo business owner."
+
+03. INSTAGRAM CAPTION
+"Write three friendly Instagram caption options about [topic] for
+[audience]. Use my brand tone: [three adjectives]. End with a gentle,
+clear call to action. Avoid exaggerated promises."
+
+04. CONTENT CALENDAR
+"Create a four-week social media calendar for [business] with three
+posts per week. Include theme, suggested format, key message and CTA."
+
+05. SHORT VIDEO SCRIPT
+"Write a 30-second video script showing how [service/product] solves
+[customer problem]. Use a natural, conversational tone and include
+simple filming instructions."
+
+06. OFFER DESCRIPTION
+"Improve this product or service description: [paste text]. Make it
+clearer and more benefit-focused without inventing features or results."
+
+07. EMAIL SUBJECTS
+"Write 10 useful, non-clickbait email subject lines for [offer/news].
+Audience: [audience]. Tone: [tone]."
+
+08. FAQ IDEAS
+"Suggest 12 questions potential customers may ask before buying
+[service/product]. Do not invent answers; mark where details are needed."
+
+CUSTOMER COMMUNICATION
+
+09. NEW ENQUIRY RESPONSE
+"Draft a warm, professional reply to someone enquiring about [service].
+Ask only the essential questions needed before offering a quote."
+
+10. FOLLOW-UP MESSAGE
+"Write a polite follow-up message for a customer who enquired about
+[service] one week ago. Keep it helpful, short and pressure-free."
+
+11. REVIEW REQUEST
+"Draft a short and genuine message asking a satisfied customer to
+leave an honest review. Make clear that any feedback is welcome."
+
+12. CUSTOMER ONBOARDING
+"Create a customer welcome email for new clients of [business]. Include
+what happens next, how to prepare, and how to ask questions."
+
+13. EXPLAIN A DELAY
+"Write a transparent, empathetic message explaining a delay in [service]
+without making excuses or unrealistic promises. Offer practical next steps."
+
+PLANNING & PRODUCTIVITY
+
+14. WEEKLY PRIORITIES
+"Act as my planning assistant. Based on these tasks [list], help me
+pick three priorities for this week. Explain your choices and suggest
+a realistic schedule."
+
+15. REPEATABLE CHECKLIST
+"Turn this recurring process [describe process] into a simple numbered
+checklist my business can follow consistently."
+
+16. IDEAL WORKFLOW
+"Help me map the steps from customer enquiry to completed service in
+my [type of business]. Identify common bottlenecks and simple fixes."
+
+17. SMART GOALS
+"Turn this vague business goal [goal] into three specific, measurable
+and achievable monthly milestones. Ask me for missing context first."
+
+18. PRODUCT IMPROVEMENT
+"Act as a thoughtful customer. Review this offer [description] and
+point out anything confusing, missing or difficult to understand."
+
+19. COMPETITOR RESEARCH PLAN
+"Make a fair competitor research checklist for my [business]. List
+public information to compare, but do not invent competitor facts."
+
+20. LEARN A NEW SKILL
+"Teach me the basics of [skill] for a small business owner with no
+prior experience. Give me a short learning plan and practical exercises."
+
+REMINDER
+AI can draft and brainstorm, but it can also make mistakes. Review and
+personalise everything before sharing it with customers. Avoid entering
+private customer information or confidential business information into
+an AI tool without appropriate safeguards.
+
+Copyright (c) BlueHatch Digital. Free to use for your own business.
+Do not resell this prompt collection as a standalone product.
+
+Explore the upcoming toolkits: visit your BlueHatch Digital website.

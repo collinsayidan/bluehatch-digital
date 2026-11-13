@@ -1,0 +1,9 @@
+.git
+.github
+.vercel
+screenshots
+*.zip
+README.md
+LAUNCH_CHECKLIST.md
+scripts
+products.json
