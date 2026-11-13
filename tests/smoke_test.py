@@ -33,6 +33,12 @@ for page in pages:
             issues.append(f'{page.relative_to(PUBLIC)}: missing {link}')
 
 assert (PUBLIC/'downloads/20-ai-prompts-for-small-business.txt').exists()
-assert len(pages) >= 15, f'Only {len(pages)} HTML pages found'
+assert len(pages) >= 19, f'Only {len(pages)} HTML pages found'
+for route in ('ai-tools','studio','free-tools','pricing'):
+    assert (PUBLIC / route / 'index.html').exists(), f'Missing hybrid route {route}'
+for asset in ('assets/css/hybrid.css','assets/js/hybrid.js'):
+    assert (PUBLIC / asset).exists(), f'Missing hybrid asset {asset}'
+assert 'Prototype mode' in (PUBLIC/'studio/index.html').read_text(encoding='utf-8')
+assert '£15' in (PUBLIC/'pricing/index.html').read_text(encoding='utf-8')
 assert not issues, '\n'.join(issues)
-print(f'PASS: {len(pages)} pages, all internal URLs and assets exist, free download exists.')
+print(f'PASS: {len(pages)} pages, all internal URLs and assets exist, free tools and download exist.')
