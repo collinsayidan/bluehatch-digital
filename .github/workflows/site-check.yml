@@ -1,17 +1,19 @@
-name: Build and smoke test
+name: Next.js build and TypeScript validation
 on:
   push:
-    branches: [main]
+    branches: [main, redesign/nextjs-product-studio]
   pull_request:
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: '3.12'
-      - name: Generate static website
-        run: python3 scripts/generate.py
-      - name: Validate internal pages and assets
-        run: python3 tests/smoke_test.py
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: TypeScript
+        run: npm run typecheck
+      - name: Production build
+        run: npm run build

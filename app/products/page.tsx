@@ -1,0 +1,12 @@
+import {PageHero} from "@/components/PageHero";
+import {Banner} from "@/components/Banner";
+import {ChartColumnIncreasing,FileSpreadsheet,NotepadText,Boxes,ArrowUpRight} from "lucide-react";
+export const metadata={title:"Digital Products"};
+const products=[
+{title:"Business KPI Dashboard Kit",kind:"DASHBOARD TEMPLATE",desc:"An editable workbook for tracking sales, costs, trends and the numbers that matter most.",Icon:ChartColumnIncreasing,style:""},
+{title:"Small Business Finance Tracker",kind:"SPREADSHEET SYSTEM",desc:"Organise everyday income, expenses and monthly performance in one accessible place.",Icon:FileSpreadsheet,style:"visual-green"},
+{title:"Business Reporting Toolkit",kind:"REPORTING RESOURCE",desc:"Reusable structures and clear explanations for presenting meaningful business results.",Icon:NotepadText,style:"visual-purple"},
+{title:"Operations & Workflow Bundle",kind:"DIGITAL SYSTEM",desc:"Ready-to-edit trackers and checklists designed to help teams stay organised.",Icon:Boxes,style:""}
+];
+export default function Products(){return <main><PageHero eyebrow="DIGITAL PRODUCT STUDIO" title={<>Useful tools.<br/>Ready when you are.</>} description="We are developing premium dashboard templates, reporting tools and digital business systems. Explore the collection below; products are previews and cannot be purchased yet."/>
+<section className="section tinted"><div className="shell"><div className="section-head"><div><span className="eyebrow">IN DEVELOPMENT</span><h2 className="h2">The upcoming collection.</h2></div><p>Downloadable products should save real time—not just give you a list of prompts.</p></div><div className="product-grid">{products.map(({title,kind,desc,Icon,style})=><article className="product-card" key={title}><div className={"product-visual "+style}><Icon size={65}/></div><div className="product-body"><span className="status-label">COMING SOON</span><h3>{title}</h3><p>{desc}</p><span className="text-link" style={{color:"#8695a9"}}>{kind} <ArrowUpRight size={15}/></span></div></article>)}</div></div></section><Banner title="Need something useful today?" description="Our CSV Data Explorer and pricing calculator are available to try right now."/></main>}

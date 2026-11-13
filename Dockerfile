@@ -1,14 +1,25 @@
-# Generate all static HTML pages, then serve with Nginx in Coolify.
-FROM python:3.12-alpine AS builder
-WORKDIR /site
-COPY products.json ./products.json
-COPY scripts/ ./scripts/
-COPY public/ ./public/
-RUN python3 scripts/generate.py
+FROM node:22-alpine AS deps
+WORKDIR /app
+COPY package.json ./
+RUN npm install --no-audit --no-fund
 
-FROM nginx:1.27-alpine
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /site/public/ /usr/share/nginx/html/
-EXPOSE 80
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s \
-  CMD wget -q -O /dev/null http://127.0.0.1/ || exit 1
+FROM node:22-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+ENV NEXT_TELEMETRY_DISABLED=1
+RUN npm run build
+
+FROM node:22-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+RUN addgroup -S nodejs && adduser -S nextjs -G nodejs
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+USER nextjs
+EXPOSE 3000
+CMD ["node","server.js"]

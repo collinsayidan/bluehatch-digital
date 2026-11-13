@@ -1,202 +1,59 @@
-# BlueHatch Digital — hybrid business tools platform (v2)
+# BlueHatch Digital — Next.js Product Studio
 
-**Status:** Preview release. The new homepage, Marketing Studio prototype, business calculator, tools directory, pricing page, existing shop and information pages are generated from source. **This is not a live AI SaaS or a functioning paid subscription service.**
+BlueHatch is a developing digital software and products brand by Collinalitics Ltd.
 
-## Preview in GitHub Codespaces
+## Status
 
-Run these commands inside the repository terminal:
+**Professional preview, not a production SaaS.** The website includes a fully working browser-based CSV Data Explorer and pricing calculator; roadmap features, subscriptions and digital products are clearly marked as unreleased. There is **no server-side AI generation, payment processing, authentication or customer database** in this build.
 
-```bash
-python3 scripts/generate.py
-python3 tests/smoke_test.py
-python3 -m http.server 8080 --bind 0.0.0.0 --directory public
-```
-
-Open the forwarded port **8080** in the Codespaces **Ports** tab. If the server is already running, regenerate the pages and refresh your browser. For the latest repository version, run `git pull origin main` first.
-
-## What's new in v2
-
-- A redesigned home page that positions BlueHatch as a hybrid **software + free tools + digital resources** company.
-- An **AI Tools** directory at `/ai-tools/` and interactive **Marketing Studio** at `/studio/`. **The studio is a guided, template-based browser prototype; it does not call ChatGPT, Claude or any other model**.
-- A working **Pricing & Profit Calculator** at `/free-tools/`, using the formula `price = total_cost / (1 - target_profit_margin)`.
-- Transparent plans and pricing at `/pricing/`. £15 and £29 monthly figures are **unavailable future concepts**, not subscriptions.
-- Client-side editing, copying and TXT/CSV downloads from the studio; no account, backend or API key required.
-- A GitHub Actions build/test workflow.
-
-## Architecture & deployment
-
-- **Python standard library site builder:** `scripts/generate.py` plus `scripts/hybrid.py`.
-- **Static pages:** generated into `public/` (run generation after pulling changes in Codespaces).
-- **CSS:** `public/assets/css/styles.css` and `public/assets/css/hybrid.css`.
-- **JavaScript:** `public/assets/js/site.js` and `public/assets/js/hybrid.js`.
-- **Vercel:** `vercel.json` runs the generator; serve `public/`.
-- **Coolify:** Dockerfile builds with Python and serves generated output with Nginx.
-- **Payments:** Payhip URLs can be configured later in `public/assets/js/config.js`. Never add secrets there.
-- **No connected AI yet:** adding real AI must be done via a secure server endpoint with private server-side credentials, usage limits, abuse controls and privacy disclosures. Do not expose API keys in browser JS or the public repository.
-
-## Launch blockers
-
-The brand and domain need commercial-name clearance; digital products require real files and licensing; Payhip payment flows need integration and test purchases; support email and legal policies need completion. See `LAUNCH_CHECKLIST.md`.
-
----
-
-# BlueHatch Digital — e-commerce website
-
-A polished, responsive, **zero-dependency static website** for BlueHatch Digital, with a multi-page product catalogue and an upgrade path to Payhip checkout. Ready to push to **GitHub**, deploy on **Vercel**, or deploy on **Coolify** using the included Dockerfile.
-
-> **Pre-launch website:** The site works immediately as a public product catalogue and free resource hub, but paid products are deliberately labelled previews. No payment links, account credentials, business email or completed paid downloads were supplied. The site **must not** claim to sell digital files until you upload real files to Payhip, enter product checkout URLs, and complete the launch checklist.
->
-> **Working brand:** The name BlueHatch Digital has not been formally cleared for UK company-name, domain and trademark use. Confirm it before purchasing branding or connecting a domain.
-
-## Included
-
-- Fast, responsive homepage with branded graphics
-- Filterable and searchable product shop (6 planned products)
-- 6 detailed product landing pages with individual metadata
-- Live Payhip `Buy now` buttons **only after you configure links**
-- Fully working free 20-prompt TXT download (no signup)
-- About, How It Works, FAQ, Contact pages
-- Privacy, Terms, Refund drafts with clear prelaunch notices
-- Mobile navigation, expandable FAQs, copyable AI prompts, accessible form labels
-- Custom SVG mark, favicon, social share illustration
-- SEO basics (per-page titles/descriptions, semantic headings, robots file)
-- Vercel configuration, Coolify-compatible Nginx Dockerfile
-- No database, account registration, paid API keys, or Node/npm packages needed
-
-## Local preview
+## Run in GitHub Codespaces
 
 ```bash
-cd bluehatch-digital/public
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-Open `http://localhost:8080` in your browser.
-
-A regular static file server is required. Opening HTML directly with `file://` may cause root-relative links to fail.
-
-## Connect real checkout links later
-
-1. Log in to Payhip.
-2. Upload and publish the **actual final digital product files**.
-3. Get the corresponding Payhip listing URL (`https://payhip.com/b/XXXX`) or direct checkout link (`https://payhip.com/buy?link=XXXX`).
-4. Edit `public/assets/js/config.js` and paste the matching link into the `checkoutUrls` object. Example:
-
-```js
-checkoutUrls: {
-  "beauty-salon-ai-marketing-toolkit": "https://payhip.com/b/REAL_PRODUCT_ID",
-  // ...
-}
-```
-
-5. Save, commit and redeploy. On that product page the disabled **Not yet available** button becomes a **Buy now** link to secure Payhip checkout. Shop page badges also become **Available now**.
-
-**Never place Payhip passwords, API keys, Stripe secret keys or private customer data in JavaScript or GitHub.** All files in `public/` are publicly accessible.
-
-### Set business contact / marketplace links
-
-In the same `config.js`, configure:
-
-- `contactEmail`: your verified business support email. The contact form then prepares an email in the customer's mail app. **It does not run a server-side contact service or send without customer action.**
-- `payhipShopUrl`: optional public Payhip storefront link.
-- `etsyShopUrl`: optional public Etsy storefront link.
-- `instagramUrl`, `pinterestUrl`, `tiktokUrl`: optional public social links.
-
-Unconfigured social/marketplace links remain hidden. Contact will clearly state that the inbox is not yet connected.
-
-## Edit products and regenerate pages
-
-Edit `products.json` to update planned contents, descriptions, pricing and sample prompts, then regenerate committed HTML:
+Open port **3000** from the **PORTS** tab. To check a production build:
 
 ```bash
-python3 scripts/generate.py
+npm run typecheck
+npm run build
 ```
 
-This script uses **only the Python standard library**. It regenerates the homepage, shop, product detail pages and supporting static pages. It does not overwrite `public/assets/js/config.js`.
+## Pages
 
-If you rename product `slug` values, update matching keys in `config.js` too.
+- `/` — premium BlueHatch landing page, dashboard illustration and product positioning
+- `/platform` — software product roadmap and availability
+- `/tools` — free tools catalogue
+- `/tools/data-explorer` — CSV reader, metrics, aggregation, visual comparison, first observation and downloadable CSV summary (local browser processing)
+- `/tools/pricing-calculator` — interactive unit economics / margin calculator
+- `/products` — upcoming digital products (no purchases)
+- `/pricing` — free plan + clearly marked future paid concepts
+- `/about`, `/contact`, `/legal/privacy`, `/legal/terms` — company and preview information
 
-To update the site design, edit `public/assets/css/styles.css`. For behaviour, edit `public/assets/js/site.js`.
+## Design
 
-## GitHub setup
+Responsive Next.js App Router with custom CSS, Manrope / DM Sans font fallbacks, Lucide icons, accessible labels, and reduced-motion support. The landing page's demo data is illustrative, not connected to customers.
 
-From the project root:
+## Technical architecture
 
-```bash
-git init
-git add .
-git commit -m "Initial BlueHatch Digital storefront"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/bluehatch-digital.git
-git push -u origin main
-```
+- Next.js 16, React 19, TypeScript
+- No server-side storage, API key, AI call, authentication or cookies required for the current tools
+- CSV Data Explorer: CSV parser with quoted values and escaped quotes, 5 MB maximum, 10,000-row analysis cap, maximum 50 columns, calculated numeric metrics and browser CSV export
+- `npm run build` and `npm run typecheck` validation in GitHub Actions
 
-Create the empty `bluehatch-digital` repository in your GitHub account first. Replace `YOUR_USERNAME` with your real GitHub username; do not paste account credentials into repository files.
+### Deployment
 
-## Deploy to Vercel (from GitHub)
+**Vercel:** Import repository, select **Next.js** framework and deploy. Do not deploy publicly until reviewed.
 
-1. In Vercel choose **Add New → Project** and import the `bluehatch-digital` GitHub repository.
-2. Use **Framework Preset: Other**. Vercel runs the dependency-free Python page generator during the build.
-3. The included `vercel.json` runs `python3 scripts/generate.py` and selects `public` as the output directory. Set **Output Directory: public** if asked manually; use the included build command.
-4. Deploy. Vercel will serve the static pages. Every push to your connected branch can trigger an automatic redeploy.
-5. Add your custom domain after verifying the business name and setting up DNS.
+**Coolify:** Deploy with the repository root Dockerfile and expose internal port **3000**. The Dockerfile builds a Next.js standalone production server.
 
-No environment variables are needed for this static version. Public Payhip product URLs and social URLs live in `config.js`.
+## Important before launching commercially
 
-## Deploy to Coolify (from the same GitHub repo)
+1. Confirm **BlueHatch** trade-name and trademark clearance and its relationship to Collinalitics Ltd.
+2. Review legal terms and privacy policy for actual controller details and hosting.
+3. Build and test paid product files, customer support, consumer-law disclosures and payments before enabling sales.
+4. For true AI workflows, add server-side authenticated endpoints, provider credentials stored as secrets, limits and financial controls, and appropriate data governance.
+5. Consider anonymised sample data before testing with private or sensitive business records.
 
-1. In Coolify, create a **new Application** and connect the GitHub repository.
-2. Select **Dockerfile** as the build strategy (the root Dockerfile is included).
-3. Set **Ports Exposes: 80** (this image uses Nginx, not Node/port 3000).
-4. Deploy. The Dockerfile copies only `public/` into Nginx and exposes port 80.
-5. Add a domain in Coolify, point DNS to the server, and enable HTTPS as appropriate.
-
-You can deploy to **both** Vercel and Coolify, but use only **one** as your primary host for a given domain. A sensible setup is `www.yourdomain.com` on Vercel and a staging subdomain on Coolify, or vice versa.
-
-### Local Docker test (if Docker is installed)
-
-```bash
-docker build -t bluehatch-digital .
-docker run --rm -p 8080:80 bluehatch-digital
-```
-
-Visit `http://localhost:8080`.
-
-## Site map
-
-| Route | Page |
-|---|---|
-| `/` | Homepage |
-| `/shop/` | Searchable and filterable catalogue |
-| `/products/<slug>/` | Six product detail pages |
-| `/resources/` | Free prompt collection download and copyable samples |
-| `/how-it-works/` | Three-step overview |
-| `/about/` | Brand story |
-| `/faq/` | Frequently asked questions |
-| `/contact/` | Pre-filled email contact form (after configuration) |
-| `/legal/privacy/` | Draft privacy policy |
-| `/legal/terms/` | Draft terms |
-| `/legal/refunds/` | Draft refund policy |
-
-## Before launch
-
-Read **[LAUNCH_CHECKLIST.md](LAUNCH_CHECKLIST.md)**. In particular: verify your branding legally, upload the actual digital products, connect Payhip, add your business email, finalise legal policies and tax treatment, and test checkout/download on a real domain.
-
-## Important constraints
-
-- This project **does not** include a proprietary checkout, customer account system, automatic email-marketing signup, analytics dashboard, or backend order system. Payhip is intended to handle **payments and digital file delivery**.
-- The product listing is a planned catalogue with suggested prices, **not a claim that products are already published**.
-- All `public/` files are visible to anyone. Keep secrets out.
-- Site imagery is created from CSS and SVG, so no paid image licences or external stock assets are required. Fonts use the visitor's installed system fonts; no external font service is required.
-- The draft legal texts are **not legal advice** and need updating before commercial use.
-
-## Verification
-
-```bash
-python3 tests/smoke_test.py
-```
-
-The site was checked with automated browser rendering at mobile, tablet and desktop widths; shop filtering, searching and mobile navigation were exercised. Docker runtime has not been executed in this environment (Docker is not installed here), so verify the container deployment on your server.
-
-## GitHub source repository
-
-The repository stores the site generator and source assets. All HTML pages are reproducibly generated during Vercel and Coolify builds from `products.json` and `scripts/generate.py`. The downloadable ZIP also contains pre-generated `public/` HTML for offline preview.
+**Git process:** original static site is preserved on `archive/static-v2-2026-11-13`. The redesign is developed on `redesign/nextjs-product-studio` before merging to main.

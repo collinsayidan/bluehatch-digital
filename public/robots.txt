@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Preview site — remove this restriction after brand clearance and launch.

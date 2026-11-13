@@ -1,9 +1,6 @@
 .git
-.github
-.vercel
-screenshots
-*.zip
+node_modules
+.next
 README.md
-LAUNCH_CHECKLIST.md
-scripts
-products.json
+.env*
+*.log
