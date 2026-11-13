@@ -1,3 +1,45 @@
+# BlueHatch Digital — hybrid business tools platform (v2)
+
+**Status:** Preview release. The new homepage, Marketing Studio prototype, business calculator, tools directory, pricing page, existing shop and information pages are generated from source. **This is not a live AI SaaS or a functioning paid subscription service.**
+
+## Preview in GitHub Codespaces
+
+Run these commands inside the repository terminal:
+
+```bash
+python3 scripts/generate.py
+python3 tests/smoke_test.py
+python3 -m http.server 8080 --bind 0.0.0.0 --directory public
+```
+
+Open the forwarded port **8080** in the Codespaces **Ports** tab. If the server is already running, regenerate the pages and refresh your browser. For the latest repository version, run `git pull origin main` first.
+
+## What's new in v2
+
+- A redesigned home page that positions BlueHatch as a hybrid **software + free tools + digital resources** company.
+- An **AI Tools** directory at `/ai-tools/` and interactive **Marketing Studio** at `/studio/`. **The studio is a guided, template-based browser prototype; it does not call ChatGPT, Claude or any other model**.
+- A working **Pricing & Profit Calculator** at `/free-tools/`, using the formula `price = total_cost / (1 - target_profit_margin)`.
+- Transparent plans and pricing at `/pricing/`. £15 and £29 monthly figures are **unavailable future concepts**, not subscriptions.
+- Client-side editing, copying and TXT/CSV downloads from the studio; no account, backend or API key required.
+- A GitHub Actions build/test workflow.
+
+## Architecture & deployment
+
+- **Python standard library site builder:** `scripts/generate.py` plus `scripts/hybrid.py`.
+- **Static pages:** generated into `public/` (run generation after pulling changes in Codespaces).
+- **CSS:** `public/assets/css/styles.css` and `public/assets/css/hybrid.css`.
+- **JavaScript:** `public/assets/js/site.js` and `public/assets/js/hybrid.js`.
+- **Vercel:** `vercel.json` runs the generator; serve `public/`.
+- **Coolify:** Dockerfile builds with Python and serves generated output with Nginx.
+- **Payments:** Payhip URLs can be configured later in `public/assets/js/config.js`. Never add secrets there.
+- **No connected AI yet:** adding real AI must be done via a secure server endpoint with private server-side credentials, usage limits, abuse controls and privacy disclosures. Do not expose API keys in browser JS or the public repository.
+
+## Launch blockers
+
+The brand and domain need commercial-name clearance; digital products require real files and licensing; Payhip payment flows need integration and test purchases; support email and legal policies need completion. See `LAUNCH_CHECKLIST.md`.
+
+---
+
 # BlueHatch Digital — e-commerce website
 
 A polished, responsive, **zero-dependency static website** for BlueHatch Digital, with a multi-page product catalogue and an upgrade path to Payhip checkout. Ready to push to **GitHub**, deploy on **Vercel**, or deploy on **Coolify** using the included Dockerfile.
