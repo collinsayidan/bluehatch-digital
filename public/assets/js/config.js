@@ -18,7 +18,7 @@ window.BLUEHATCH_CONFIG = {
     "beauty-salon-ai-marketing-toolkit": "",
     "cleaning-business-ai-toolkit": "",
     "personal-trainer-content-kit": "",
-    "small-business-prompt-library": "",
+    "small-business-workflow-library": "",
     "social-content-planner": "",
     "business-growth-bundle": ""
   }
